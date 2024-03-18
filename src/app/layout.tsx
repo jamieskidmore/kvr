@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/navbar";
+import Image from "next/image";
+import Footer from "@/components/footer";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className}`}>
+        <header className="fixed top-0 flex w-full mb-5 bg-blue-500 z-50">
+          <div className="w-36 h-34 relative">
+            <Link href="/">
+              <Image
+                src={"/kvr-logo.webp"}
+                alt="logo"
+                layout="fill"
+                objectFit="contain"
+              />
+            </Link>
+          </div>
+          <div className="w-full relative mr-4">
+            <Navbar />
+          </div>
+        </header>
+        <main className="mt-40">
+          {children}
+          <div className="fixed bottom-0 w-full">
+            <Footer />
+          </div>
+        </main>
+      </body>
     </html>
   );
 }

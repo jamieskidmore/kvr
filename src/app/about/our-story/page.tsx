@@ -1,12 +1,6 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function OurStory() {
   return (
     <div className="m-10">
-      <h1>Welcome to Kettle Valley Regional Plumbing & Gas</h1>
-      <div className="w-full flex justify-center">
-        <Image src={"/placeholder.webp"} alt="logo" width={800} height={0} />
-      </div>
       <p>
         As a leading plumbing company committed to excellence, we pride
         ourselves on delivering top-notch services that go beyond fisxing leaks
