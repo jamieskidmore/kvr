@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className}`}>
         <header className="fixed top-0 flex w-full mb-5 bg-blue-500 z-50">
-          <div className="" style={{ width: "150px", height: "150px" }}>
+          <div className="fixed" style={{ width: "150px", height: "150px" }}>
             <Link href="/">
               <Image
                 src={"/kvr-logo.webp"}
