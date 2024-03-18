@@ -4,12 +4,23 @@ import emailjs from "@emailjs/browser";
 export default function ContactForm() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (
+      !process.env.NEXT_PUBLIC_SERVICE_ID ||
+      !process.env.NEXT_PUBLIC_TEMPLATE_ID ||
+      !process.env.NEXT_PUBLIC_PUBLIC_KEY
+    ) {
+      return;
+    }
     const form = e.target as HTMLFormElement;
-
     emailjs
-      .sendForm("service_umdkdz9", "template_sn2wmvr", form, {
-        publicKey: "COFcOa7UvkzRqoXWm",
-      })
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        form,
+        {
+          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
           console.log("SUCCESS!");

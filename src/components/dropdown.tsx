@@ -21,8 +21,8 @@ export default function Dropdown({
     <Menu as="div" className="">
       <Menu.Button className="">{capitalize(content.category)}</Menu.Button>
       <Menu.Items className="">
-        {content.menuOptions.map((optionName) => (
-          <Menu.Item>
+        {content.menuOptions.map((optionName, index) => (
+          <Menu.Item key={index}>
             {({ active }) => (
               <Link
                 href={`/${content.category}/${hyphenate(optionName)}`}
