@@ -34,8 +34,8 @@ export default function Reviews() {
     <div>
       <h2>Reviews for Kettle Valley Regional Plumbing & Gas</h2>
       <div>
-        {reviews.map((review) => (
-          <div>
+        {reviews.map((review, index) => (
+          <div key={index}>
             <p>{review.name}</p>
             <p>
               {review.rating}/5 - {review.date}
