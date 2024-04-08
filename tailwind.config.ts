@@ -8,10 +8,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      backgroundColor: {
+        body: "#FFFFFF",
+      },
+      colors: {
+        // Header Background
+        "header-bg": "#1F4082",
+
+        // Main Background
+        "main-bg": "#FFFFFF",
+
+        // Text Color
+        "text-white": "#FFFFFF",
+        "text-blue": "#103463",
+        "text-gray": "#343A40",
+
+        // Accent Colors
+        orange: "#EC9325",
+        "light-blue": "#3E9DD4",
+
+        // Call to Action/Button Color
+        "cta-orange": "#DF4C25",
+
+        // Border/Divider Color
+        "border-gray": "#555555",
+
+        // Footer Background
+        "footer-bg": "#000000",
       },
     },
   },

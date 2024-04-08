@@ -68,17 +68,12 @@ export default function Gallery() {
                 bathroomImagePaths.map((path, index) => (
                   <div
                     key={index}
-                    className="w-full h-64 relative"
+                    className="w-full h-64 relative z-0"
                     onClick={() => {
                       handleDisplayImage(path);
                     }}
                   >
-                    <Image
-                      src={path}
-                      alt="Bathroom"
-                      layout="fill"
-                      objectFit="cover"
-                    />
+                    <Image src={path} alt="Bathroom" layout="fill" />
                   </div>
                 ))}
             </div>

@@ -20,29 +20,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
-        <header className="fixed top-0 flex w-full mb-5 bg-blue-500 z-50">
+      <body
+        className={`${inter.className} bg-main-bg flex flex-col min-h-screen`}
+      >
+        <header className="fixed top-0 flex w-full mb-5 bg-header-bg justify-between items-center z-10">
+          <Link href="/" className="">
+            <div className=" w-36 h-40 mr-2"></div>
+          </Link>
           <div className="fixed" style={{ width: "150px", height: "150px" }}>
-            <Link href="/">
-              <Image
-                src={"/kvr-logo.webp"}
-                alt="logo"
-                width={150}
-                height={150}
-                className="fixed p-2"
-              />
-            </Link>
+            <Image src={"/kvr-logo.webp"} alt="logo" width={150} height={150} />
           </div>
-          <div className="w-full relative mr-4">
+          <div className="w-full relative ml-24">
             <Navbar />
           </div>
         </header>
-        <main className="mt-40">
-          {children}
-          <div className="fixed bottom-0 w-full">
-            <Footer />
-          </div>
-        </main>
+        <main className="mt-40 flex-1">{children}</main>
+        <footer className="bg-header-bg text-text-white text-center py-4">
+          <Footer />
+        </footer>
       </body>
     </html>
   );
