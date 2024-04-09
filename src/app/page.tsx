@@ -10,8 +10,22 @@ import {
 import ContactForm from "@/components/contact-form";
 import ServiceLink from "@/components/service-link";
 import Image from "next/legacy/image";
+import Pills from "@/components/pills";
 
 export default function Home() {
+  const places = [
+    "Kelowna",
+    "West Kelowna",
+    "Pentiction",
+    "Peachland",
+    "Summerland",
+    "Oliver",
+    "Osoyoos",
+    "Okanagan Falls",
+    "Naramata",
+    "Keremeos",
+  ];
+
   return (
     <div>
       <div className="fixed top-0 left-0 w-screen h-screen z-0">
@@ -24,7 +38,7 @@ export default function Home() {
       </div>
       <div className="relative">
         <div className="mt-20 flex flex-col justify-center items-center h-96">
-          <div className="">
+          <div>
             <h1
               className="text-white text-5xl font-bold p-4 text-center"
               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
@@ -60,37 +74,8 @@ export default function Home() {
                 the Okanagan region of British Columbia including, but not
                 limited to:
               </p>
-              <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto text-lg">
-                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
-                  Kelowna
-                </div>
-                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
-                  West Kelowna
-                </div>
-                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
-                  Pentiction
-                </div>
-                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
-                  Peachland
-                </div>
-                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
-                  Summerland
-                </div>
-                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
-                  Oliver
-                </div>
-                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
-                  Osoyoos
-                </div>
-                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
-                  Okanagan Falls
-                </div>
-                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
-                  Naramata
-                </div>
-                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
-                  Keremeos
-                </div>
+              <div className="max-w-2xl mx-auto">
+                <Pills array={places} />
               </div>
             </div>
             <div className="space-y-4">

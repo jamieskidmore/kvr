@@ -8,7 +8,7 @@ import Dropdown from "./dropdown";
 import Link from "next/link";
 
 const aboutMenuOptions = ["our story", "service area"];
-const servicesMenuOptions = ["plumbing", "gas", "inspection", "commercial"];
+const servicesMenuOptions = ["plumbing", "gas", "commercial", "inspection"];
 
 export default function Navbar() {
   return (
