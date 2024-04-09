@@ -51,6 +51,7 @@ export default function Reviews() {
           </div>
           {reviews.map((review, index) => (
             <Review
+              key={index}
               name={review.name}
               date={review.date}
               rating={review.rating}
