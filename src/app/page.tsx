@@ -13,7 +13,7 @@ import Image from "next/legacy/image";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <div className="fixed top-0 left-0 w-screen h-screen z-0">
         <Image
           src={"/view.png"}
@@ -38,12 +38,12 @@ export default function Home() {
         </div>
         <div className="h-2 bg-border-gray w-full"></div>
         <div className="bg-main-bg ">
-          <div className="space-y-8">
+          <div className="space-y-10">
             <div className="space-y-4 text-text-gray mx-auto px-10 max-w-md md:max-w-6xl">
-              <h2 className="text-2xl font-bold text-text-blue text-center px-6 pt-4">
+              <h2 className="text-3xl font-bold text-text-blue text-center px-6 pt-4">
                 Welcome to Kettle Valley Plumbing & Gas
               </h2>
-              <p className="">
+              <p className="text-lg">
                 As a leading plumbing company committed to excellence, we pride
                 ourselves on delivering top-notch services that go beyond fixing
                 leaks – we create solutions that flow seamlessly. With 30+ years
@@ -51,18 +51,54 @@ export default function Home() {
                 your go-to experts for all things plumbing. At KVRPG, we don't
                 just fix problems; we build lasting connections with our
                 clients. Trust us to handle your plumbing needs with precision,
-                reliabidivty, and a commitment to quality that sets us apart.
+                reliability, and a commitment to quality that sets us apart.
                 Your satisfaction is our success, and we're ready to exceed your
                 expectations.
               </p>
-              <p>Slay</p>
+              <p className="text-lg">
+                Kettle Valley Regional Plumbing and Gas serves communities in
+                the Okanagan region of British Columbia including, but not
+                limited to:
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto text-lg">
+                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
+                  Kelowna
+                </div>
+                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
+                  West Kelowna
+                </div>
+                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
+                  Pentiction
+                </div>
+                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
+                  Peachland
+                </div>
+                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
+                  Summerland
+                </div>
+                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
+                  Oliver
+                </div>
+                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
+                  Osoyoos
+                </div>
+                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
+                  Okanagan Falls
+                </div>
+                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
+                  Naramata
+                </div>
+                <div className="text-center bg-text-gray text-text-white px-2 rounded-2xl font-semibold">
+                  Keremeos
+                </div>
+              </div>
             </div>
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-text-blue text-center px-6">
+              <h2 className="text-3xl font-bold text-text-blue text-center px-6">
                 Services
               </h2>
               <div className="text-text-gray mx-auto space-y-4 px-10 max-w-md md:max-w-6xl">
-                <div className="flex">
+                <div className="flex text-lg">
                   <div className="space-y-4 w-full">
                     <div>
                       <ServiceLink
@@ -101,7 +137,7 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-4 pb-4">
-              <h2 className="text-2xl font-bold text-text-blue text-center px-6">
+              <h2 className="text-3xl font-bold text-text-blue text-center px-6">
                 Contact Us
               </h2>
               <ContactForm />

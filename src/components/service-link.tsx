@@ -21,8 +21,8 @@ export default function ServiceLink({
           <div className="flex my-2 justify-center min-w-8">
             <FontAwesomeIcon icon={faIcon} className="text-3xl" />
           </div>
-          <div className="flex w-full p-2 justify-between rounded hover:bg-light-blue hover:text-text-white">
-            <h3 className="flex text-lg font-semibold">{service}</h3>
+          <div className="flex w-full py-2 px-1 justify-between rounded hover:bg-light-blue hover:text-text-white">
+            <h3 className="flex text-xl font-semibold">{service}</h3>
             <div className="flex">
               <FontAwesomeIcon
                 icon={faArrowRight}
@@ -32,7 +32,7 @@ export default function ServiceLink({
           </div>
         </div>
         <div className="px-14">
-          <p>{description}</p>
+          <p className="hidden md:flex">{description}</p>
         </div>
       </div>
     </Link>

@@ -34,7 +34,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={sendEmail}
-      className="max-w-sm md:max-w-2xl mx-auto p-4 bg-header-bg rounded-2xl"
+      className="max-w-sm md:max-w-2xl text-lg mx-auto p-4 bg-header-bg rounded-2xl"
     >
       <div className="mb-4">
         <label
