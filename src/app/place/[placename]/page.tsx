@@ -19,7 +19,7 @@ export default function Place({ params }: { params: { placename: string } }) {
           <div>
             <p className="text-lg text-center">
               KVR can help with your plumbing and gas needs in {placeName}.
-              Please get in touch with us an we'll respond shortly.
+              Please get in touch with us an we&apos;ll respond shortly.
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-between pb-4 space-y-12 md:space-y-0 md:space-x-4">
