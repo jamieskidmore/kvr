@@ -20,17 +20,18 @@ export default function GallerySection({
   };
 
   return (
-    <div id="bathroom">
-      <div className="flex text-3xl font-bold text-text-blue text-center">
-        <h2 className="pr-4">{name}</h2>
-        <button
-          onClick={() => {
-            setHidden(!hidden);
-          }}
-        >
+    <div className="space-y-4">
+      <button
+        className="w-full"
+        onClick={() => {
+          setHidden(!hidden);
+        }}
+      >
+        <div className="flex text-3xl font-bold text-text-blue text-center justify-between hover:bg-light-blue hover:text-text-white cursor-pointer rounded px-2">
+          <h2 className="pr-4">{name}</h2>
           {hidden ? "v" : "-"}
-        </button>
-      </div>
+        </div>
+      </button>
       <div className="flex">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
           {!hidden &&
@@ -42,7 +43,7 @@ export default function GallerySection({
                   handleDisplayImage(path);
                 }}
               >
-                <Image src={path} alt="Bathroom" layout="fill" />
+                <Image src={path} alt={`${name}`} layout="fill" />
               </div>
             ))}
         </div>

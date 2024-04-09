@@ -40,10 +40,11 @@ export default function Gas() {
           </h1>
           <div>
             <p className="text-lg">
-              KVR Plumbing and Gas offers gas services for homes and businesses.
-              Our experienced team handles everything from installations to
-              repairs, ensuring safety and efficiency. Trust KVR for reliable
-              gas solutions tailored to your needs.
+              KVR Plumbing and Gas works closely with site managers on
+              commercial projects. Our experienced team ensures smooth
+              coordination and timely completion of plumbing tasks. Trust KVR
+              for professional and efficient plumbing services tailored to
+              commercial needs.
             </p>
           </div>
           <div className="space-y-4">

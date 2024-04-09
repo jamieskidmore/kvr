@@ -31,19 +31,32 @@ export default function Gallery() {
             Gallery
           </h1>
 
-          <div>
-            <h2 className="text-3xl font-bold text-text-blue">Jump to</h2>
-            <ul className="mb-10">
-              <li key="bathroom">
-                <Link href="#bathroom">Bathrooms</Link>
-              </li>
-              <li key="hot-water-tank">
-                <Link href="#hot-water-tank">Hot Water Tanks</Link>
-              </li>
-              <li key="underfloor">
-                <Link href="#underfloor">Underfloor</Link>
-              </li>
-            </ul>
+          <div className="flex">
+            <div className="mx-auto">
+              <h2 className="text-3xl font-bold text-text-blue pb-4 text-center">
+                Jump to
+              </h2>
+              <ul className="space-y-2 text-center">
+                <li key="bathroom">
+                  <Link href="#bathroom" className="hover:text-light-blue">
+                    Bathrooms
+                  </Link>
+                </li>
+                <li key="hot-water-tank">
+                  <Link
+                    href="#hot-water-tank"
+                    className="hover:text-light-blue"
+                  >
+                    Hot Water Tanks
+                  </Link>
+                </li>
+                <li key="underfloor">
+                  <Link href="#underfloor" className="hover:text-light-blue">
+                    Underfloor
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="max-w-3xl mx-auto">
             <div className="space-y-8">
