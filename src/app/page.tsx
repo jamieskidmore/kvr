@@ -1,22 +1,30 @@
 "use client";
 
+import {
+  faTint,
+  faSmog,
+  faBuilding,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
+
 import ContactForm from "@/components/contact-form";
+import ServiceLink from "@/components/service-link";
 import Image from "next/legacy/image";
 
-export default async function Home() {
+export default function Home() {
   return (
-    <div className="m-0">
-      <div className="fixed top-0 left-0 w-screen h-2/3 z-0">
+    <div className="">
+      <div className="fixed top-0 left-0 w-screen h-screen z-0">
         <Image
-          src={"/view.jpeg"}
+          src={"/view.png"}
           alt="background"
           layout="fill"
           objectFit="cover"
         />
       </div>
       <div className="relative">
-        <div className="bg-white bg-opacity-20 flex flex-col justify-center items-center h-96">
-          <div>
+        <div className="mt-20 flex flex-col justify-center items-center h-96">
+          <div className="">
             <h1
               className="text-white text-5xl font-bold p-4 text-center"
               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
@@ -29,39 +37,72 @@ export default async function Home() {
           </button>
         </div>
         <div className="h-2 bg-border-gray w-full"></div>
-        <div className="bg-main-bg">
-          <div className="space-y-12">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-text-blue text-center p-6">
+        <div className="bg-main-bg ">
+          <div className="space-y-8">
+            <div className="space-y-4 text-text-gray mx-auto px-10 max-w-md md:max-w-6xl">
+              <h2 className="text-2xl font-bold text-text-blue text-center px-6 pt-4">
                 Welcome to Kettle Valley Plumbing & Gas
               </h2>
-              <p className="text-text-gray px-10">
+              <p className="">
                 As a leading plumbing company committed to excellence, we pride
-                ourselves on delivering top-notch services that go beyond
-                fisxing leaks – we create solutions that flow seamlessly. With
-                30+ years of experience and a dedication to customer
-                satisfaction, we are your go-to experts for all things plumbing.
-                At KVRPG, we don't just fix problems; we build lasting
-                connections with our clients. Trust us to handle your plumbing
-                needs with precision, reliability, and a commitment to quality
-                that sets us apart. Your satisfaction is our success, and we're
-                ready to exceed your expectations.
+                ourselves on delivering top-notch services that go beyond fixing
+                leaks – we create solutions that flow seamlessly. With 30+ years
+                of experience and a dedication to customer satisfaction, we are
+                your go-to experts for all things plumbing. At KVRPG, we don't
+                just fix problems; we build lasting connections with our
+                clients. Trust us to handle your plumbing needs with precision,
+                reliabidivty, and a commitment to quality that sets us apart.
+                Your satisfaction is our success, and we're ready to exceed your
+                expectations.
               </p>
+              <p>Slay</p>
             </div>
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-text-blue text-center p-6">
+              <h2 className="text-2xl font-bold text-text-blue text-center px-6">
                 Services
               </h2>
-              <p className="text-text-gray px-10">Our services include:</p>
-              <ul className="text-text-gray px-20">
-                <li>Plumbing</li>
-                <li>Gas</li>
-                <li>Residenstial & Commercial!</li>
-              </ul>
+              <div className="text-text-gray mx-auto space-y-4 px-10 max-w-md md:max-w-6xl">
+                <div className="flex">
+                  <div className="space-y-4 w-full">
+                    <div>
+                      <ServiceLink
+                        service="Plumbing"
+                        path="plumbing"
+                        faIcon={faTint}
+                        description="KVR Plumbing and Gas provides comprehensive plumbing services for both residential and commercial properties. From minor repairs to major installations, our skilled team delivers reliable solutions tailored to meet your needs. Trust KVR for dependable plumbing services, ensuring your systems operate smoothly."
+                      />
+                    </div>
+                    <div>
+                      <ServiceLink
+                        service="Gas"
+                        path="gas"
+                        faIcon={faSmog}
+                        description="KVR Plumbing and Gas offers gas services for homes and businesses. Our experienced team handles everything from installations to repairs, ensuring safety and efficiency. Trust KVR for reliable gas solutions tailored to your needs."
+                      />
+                    </div>
+                    <div>
+                      <ServiceLink
+                        service="Commercial"
+                        path="commercial"
+                        faIcon={faBuilding}
+                        description="KVR Plumbing and Gas works closely with site managers on commercial projects. Our experienced team ensures smooth coordination and timely completion of plumbing tasks. Trust KVR for professional and efficient plumbing services tailored to commercial needs."
+                      />
+                    </div>
+                    <div>
+                      <ServiceLink
+                        service="Inspection"
+                        path="inspection"
+                        faIcon={faSearch}
+                        description="With more than ten years of plumbing and gas inspection expertise gained in government roles, our team at KVR Plumbing and Gas is well-versed in conducting inspections for residential, commercial, and industrial properties. Count on our experience to deliver meticulous and dependable inspections tailored to your requirements."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-text-blue text-center p-6">
-                Contact Us Today!
+            <div className="space-y-4 pb-4">
+              <h2 className="text-2xl font-bold text-text-blue text-center px-6">
+                Contact Us
               </h2>
               <ContactForm />
             </div>

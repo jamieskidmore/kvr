@@ -32,11 +32,14 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={sendEmail} className="max-w-md mx-auto pb-4">
+    <form
+      onSubmit={sendEmail}
+      className="max-w-sm md:max-w-2xl mx-auto p-4 bg-header-bg rounded-2xl"
+    >
       <div className="mb-4">
         <label
           htmlFor="user_name"
-          className="block text-white font-semibold mb-2"
+          className="block text-text-white font-semibold mb-2"
         >
           Name
         </label>
@@ -44,13 +47,13 @@ export default function ContactForm() {
           type="text"
           id="user_name"
           name="user_name"
-          className="w-full px-3 py-2 rounded bg-custom-black text-white focus:outline-none focus:bg-gray-700"
+          className="w-full px-3 py-2 rounded bg-text-white text-text-gray focus:bg-text-gray focus:text-text-white"
         />
       </div>
       <div className="mb-4">
         <label
           htmlFor="user_email"
-          className="block text-white font-semibold mb-2"
+          className="block text-text-white font-semibold mb-2"
         >
           Email
         </label>
@@ -58,13 +61,13 @@ export default function ContactForm() {
           type="email"
           id="user_email"
           name="user_email"
-          className="w-full px-3 py-2 rounded bg-custom-black text-white focus:outline-none focus:bg-gray-700"
+          className="w-full px-3 py-2 rounded bg-text-white text-text-gray focus:bg-text-gray  focus:text-text-white"
         />
       </div>
       <div className="mb-4">
         <label
           htmlFor="subject"
-          className="block text-white font-semibold mb-2"
+          className="block text-text-white font-semibold mb-2"
         >
           Subject
         </label>
@@ -72,27 +75,27 @@ export default function ContactForm() {
           type="text"
           id="subject"
           name="subject"
-          className="w-full px-3 py-2 rounded bg-custom-black text-white focus:outline-none focus:bg-gray-700"
+          className="w-full px-3 py-2 rounded text-text-gray bg-text-white focus:bg-text-gray focus:text-text-white"
         />
       </div>
       <div className="mb-4">
         <label
           htmlFor="message"
-          className="block text-white font-semibold mb-2"
+          className="block text-text-white font-semibold mb-2"
         >
           Message
         </label>
         <textarea
           id="message"
           name="message"
-          className="w-full px-3 py-2 rounded bg-custom-black text-white focus:outline-none focus:bg-gray-700"
+          className="w-full px-3 py-2 rounded bg-text-white text-text-gray focus:bg-text-gray focus:text-text-white"
         ></textarea>
       </div>
       <div className="text-center">
         <input
           type="submit"
           value="Send"
-          className="bg-cta-orange border-4 border-border-gray hover:bg-yellow-500 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
+          className="bg-cta-orange px-4 py-2 rounded-xl text-text-white text-xl cursor-pointer"
         />
       </div>
     </form>
