@@ -24,9 +24,9 @@ export default function RootLayout({
         className={`${inter.className} bg-main-bg flex flex-col min-h-screen`}
       >
         <header className="fixed flex mb-5 w-full bg-header-bg justify-between items-center z-10">
-          <div className="fixed mt-20 pl-6 hidden md:flex">
+          <Link className="fixed mt-20 pl-6 hidden md:flex" href="/">
             <Image src={"/kvr-logo.webp"} alt="logo" width={150} height={150} />
-          </div>
+          </Link>
           <div className="w-full relative">
             <div className="">
               <Navbar />

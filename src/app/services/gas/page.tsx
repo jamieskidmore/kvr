@@ -3,33 +3,34 @@
 import ContactForm from "@/components/contact-form";
 import Pills from "@/components/pills";
 
+const gasServices = [
+  "Gas stove installation",
+  "Gas oven installation",
+  "Gas grill installation",
+  "Gas fireplace installation",
+  "Gas water heater installation",
+  "Gas furnace installation",
+  "Gas dryer installation",
+  "Gas appliance repair",
+];
+
+const gasLineServices = [
+  "Gas line installation",
+  "Gas line repair",
+  "Gas line inspection",
+  "Gas leak detection",
+  "Gas line pressure testing",
+];
+
+const maintenanceServices = [
+  "Carbon monoxide testing",
+  "Gas safety inspections",
+  "Gas shut-off valve installation",
+  "Gas appliance venting inspection",
+  "Gas appliance ventilation cleaning",
+];
+
 export default function Gas() {
-  const gasServices = [
-    "Gas stove installation",
-    "Gas oven installation",
-    "Gas grill installation",
-    "Gas fireplace installation",
-    "Gas water heater installation",
-    "Gas furnace installation",
-    "Gas dryer installation",
-    "Gas appliance repair",
-  ];
-
-  const gasLineServices = [
-    "Gas line installation",
-    "Gas line repair",
-    "Gas line inspection",
-    "Gas leak detection",
-    "Gas line pressure testing",
-  ];
-
-  const maintenanceServices = [
-    "Carbon monoxide testing",
-    "Gas safety inspections",
-    "Gas shut-off valve installation",
-    "Gas appliance venting inspection",
-    "Gas appliance ventilation cleaning",
-  ];
   return (
     <div className="mx-10 mt-24">
       <div>
@@ -59,7 +60,9 @@ export default function Gas() {
                 </div>
 
                 <div className="text-lg space-y-2">
-                  <h3 className="flex text-xl font-semibold">Pipe Services</h3>
+                  <h3 className="flex text-xl font-semibold">
+                    Gas Line Services
+                  </h3>
                   <Pills array={gasLineServices} />
                 </div>
                 <div className="text-lg space-y-2">

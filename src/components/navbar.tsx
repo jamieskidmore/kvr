@@ -31,12 +31,7 @@ export default function Navbar() {
           />
         </li>
         <li key="about" className="hover:text-light-blue">
-          <Dropdown
-            content={{
-              category: "about",
-              menuOptions: aboutMenuOptions,
-            }}
-          />
+          <Link href="/about">About</Link>
         </li>
         <li key="reviews" className="hover:text-light-blue">
           <Link href="/reviews">Reviews</Link>

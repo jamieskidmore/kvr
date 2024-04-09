@@ -3,46 +3,46 @@
 import ContactForm from "@/components/contact-form";
 import Pills from "@/components/pills";
 
+const plumbingServices = [
+  "Faucets",
+  "Sinks",
+  "Drains",
+  "Baths & showers",
+  "Toilets",
+  "Laundry machines",
+  "Hot water tanks",
+  "Water heaters",
+  "Water filters",
+  "Water softeners",
+  "Garburators",
+  "Water mains",
+  "Sump pumps",
+  "Sewer lines",
+  "Irrigation systems",
+];
+
+const pipePlumbingServices = [
+  "Repiping",
+  "Poly-b replacement",
+  "Leak detection",
+  "Leak repair",
+];
+
+const emergencyPlumbingServices = [
+  "Burst pipe repair",
+  "Emergency drain cleaning",
+  "Emergency water heater repair",
+];
+
+const maintenancePlumbingServices = [
+  "Annual plumbing inspections",
+  "Preventative maintenance",
+  "Drain cleaning",
+  "Water heater flushing",
+  "Pipe insulation",
+];
+
 export default function Plumbing() {
-  const plumbingServices = [
-    "Faucets",
-    "Sinks",
-    "Drains",
-    "Baths & showers",
-    "Toilets",
-    "Laundry machines",
-    "Hot water tanks",
-    "Water heaters",
-    "Water filters",
-    "Water softeners",
-    "Garburators",
-    "Water mains",
-    "Sump pumps",
-    "Sewer lines",
-    "Irrigation systems",
-  ];
-
-  const pipePlumbingServices = [
-    "Repiping",
-    "Poly-b replacement",
-    "Leak detection",
-    "Leak repair",
-  ];
-
-  const emergencyPlumbingServices = [
-    "Burst pipe repair",
-    "Emergency drain cleaning",
-    "Emergency water heater repair",
-  ];
-
-  const maintenancePlumbingServices = [
-    "Annual plumbing inspections",
-    "Preventative maintenance",
-    "Drain cleaning",
-    "Water heater flushing",
-    "Pipe insulation",
-  ];
-
   return (
     <div className="mx-10 mt-24">
       <div className="">

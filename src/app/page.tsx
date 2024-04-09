@@ -14,18 +14,17 @@ import Pills from "@/components/pills";
 
 export default function Home() {
   const places = [
-    "Kelowna",
-    "West Kelowna",
-    "Pentiction",
-    "Peachland",
-    "Summerland",
-    "Oliver",
-    "Osoyoos",
-    "Okanagan Falls",
-    "Naramata",
-    "Keremeos",
+    { place: "Kelowna", link: "kelowna" },
+    { place: "West Kelowna", link: "west-kelowna" },
+    { place: "Penticton", link: "penticton" },
+    { place: "Peachland", link: "peachland" },
+    { place: "Summerland", link: "summerland" },
+    { place: "Oliver", link: "oliver" },
+    { place: "Osoyoos", link: "osoyoos" },
+    { place: "Okanagan Falls", link: "okanagan-falls" },
+    { place: "Naramata", link: "naramata" },
+    { place: "Keremeos", link: "keremeos" },
   ];
-
   return (
     <div>
       <div className="fixed top-0 left-0 w-screen h-screen z-0">
@@ -75,7 +74,7 @@ export default function Home() {
                 limited to:
               </p>
               <div className="max-w-2xl mx-auto">
-                <Pills array={places} />
+                <Pills links={places} />
               </div>
             </div>
             <div className="space-y-4">
