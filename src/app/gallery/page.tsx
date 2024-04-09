@@ -1,6 +1,8 @@
 "use client";
 
+import GallerySection from "@/components/gallery-section";
 import Image from "next/legacy/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const bathroomImagePaths = [
@@ -21,150 +23,76 @@ const underfloorImagePaths = [
 ];
 
 export default function Gallery() {
-  const [bathroomHidden, setBathroomHidden] = useState(false);
-  const [underfloorHidden, setUnderfloorHidden] = useState(false);
-  const [hotWaterTankHidden, setHotWaterTankHidden] = useState(false);
-
-  const [imageHidden, setImageHidden] = useState(true);
-  const [displayedImagePath, setDisplayedImagePath] =
-    useState("/download.webp");
-
-  const handleDisplayImage = (path?: string) => {
-    if (path) {
-      setDisplayedImagePath(path);
-    }
-    setImageHidden(!imageHidden);
-  };
-
   return (
-    <div className="m-10">
+    <div className="mx-10 mt-24" id="gallery">
       <div>
-        <h1 className="mb-10">Gallery</h1>
-        <ul className="mb-10">
-          <li key="bathroom">
-            <a href="#bathroom">Bathrooms</a>
-          </li>
-          <li key="hot-water-tank">
-            <a href="#hot-water-tank">Hot Water Tanks</a>
-          </li>
-          <li key="underfloor">
-            <a href="#underfloor">Underfloor</a>
-          </li>
-        </ul>
-        <div className="space-y-8">
-          <div id="bathroom">
-            <div className="flex">
-              <h2 className="mr-2">Bathroom</h2>
-              <button
-                onClick={() => {
-                  setBathroomHidden(!bathroomHidden);
-                }}
-              >
-                v
-              </button>
-            </div>
-            <div className="grid grid-cols-3 gap-4">
-              {!bathroomHidden &&
-                bathroomImagePaths.map((path, index) => (
-                  <div
-                    key={index}
-                    className="w-full h-64 relative z-0"
-                    onClick={() => {
-                      handleDisplayImage(path);
-                    }}
-                  >
-                    <Image src={path} alt="Bathroom" layout="fill" />
-                  </div>
-                ))}
-            </div>
+        <div className="space-y-10 text-text-gray mx-auto text-lg px-10 max-w-md md:max-w-6xl pb-4">
+          <h1 className="text-5xl font-bold text-text-blue text-center px-6 pt-4 max-w-xl mx-auto">
+            Gallery
+          </h1>
+
+          <div>
+            <h2 className="text-3xl font-bold text-text-blue">Jump to</h2>
+            <ul className="mb-10">
+              <li key="bathroom">
+                <Link href="#bathroom">Bathrooms</Link>
+              </li>
+              <li key="hot-water-tank">
+                <Link href="#hot-water-tank">Hot Water Tanks</Link>
+              </li>
+              <li key="underfloor">
+                <Link href="#underfloor">Underfloor</Link>
+              </li>
+            </ul>
           </div>
-          <div id="hot-water-tank">
-            <div className="flex">
-              <h2 className="mr-2">Hot Water Tank</h2>
-              <button
-                onClick={() => {
-                  setHotWaterTankHidden(!hotWaterTankHidden);
-                }}
-              >
-                v
-              </button>
-            </div>
-            <div className="grid grid-cols-3 gap-4">
-              {!hotWaterTankHidden &&
-                hotWaterTankImagePaths.map((path, index) => (
-                  <div
-                    key={index}
-                    className="w-full h-64 relative"
-                    onClick={() => {
-                      handleDisplayImage(path);
-                    }}
-                  >
-                    <Image
-                      src={path}
-                      alt="Hot water tank"
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
-                ))}
-            </div>
-          </div>
-          <div id="underfloor">
-            <div className="flex">
-              <h2 className="mr-2">Underfloor</h2>
-              <button
-                onClick={() => {
-                  setUnderfloorHidden(!underfloorHidden);
-                }}
-              >
-                v
-              </button>
-            </div>
-            <div className="grid grid-cols-3 gap-4">
-              {!underfloorHidden &&
-                underfloorImagePaths.map((path, index) => (
-                  <div
-                    key={index}
-                    className="w-full h-64 relative"
-                    onClick={() => {
-                      handleDisplayImage(path);
-                    }}
-                  >
-                    <Image
-                      src={path}
-                      alt="placeholder"
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
-                ))}
+          <div className="max-w-3xl mx-auto">
+            <div className="space-y-8">
+              <div id="bathroom">
+                <GallerySection
+                  name="Bathroom"
+                  imagePaths={bathroomImagePaths}
+                />
+              </div>
+              <div id="hot-water-tank">
+                <GallerySection
+                  name="Hot Water Tank"
+                  imagePaths={hotWaterTankImagePaths}
+                />
+              </div>
+              <div id="underfloor">
+                <GallerySection
+                  name="Underfloor"
+                  imagePaths={underfloorImagePaths}
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      {!imageHidden && (
-        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center">
-          <div className="bg-white p-4">
-            <button
-              className="text-black"
-              onClick={() => {
-                handleDisplayImage();
-              }}
-            >
-              X
-            </button>
-            <div className="max-h-[600px] overflow-hidden w-full flex justify-center">
-              <Image
-                src={displayedImagePath}
-                alt="placeholder"
-                width={600}
-                height={0}
-                objectFit="cover"
-              />
-            </div>
-          </div>
-        </div>
-      )}
+
+      {/* {!imageHidden && (
+              <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center">
+                <div className="bg-white p-4">
+                  <button
+                    className="text-black"
+                    // onClick={() => {
+                    //   handleDisplayImage();
+                    // }}
+                  >
+                    X
+                  </button>
+                  <div className="max-h-[600px] overflow-hidden w-full flex justify-center">
+                    <Image
+                      src={displayedImagePath}
+                      alt="placeholder"
+                      width={600}
+                      height={0}
+                      objectFit="cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            )} */}
     </div>
   );
 }

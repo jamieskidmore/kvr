@@ -45,7 +45,7 @@ const maintenancePlumbingServices = [
 export default function Plumbing() {
   return (
     <div className="mx-10 mt-24">
-      <div className="">
+      <div>
         <div className="space-y-10 text-text-gray mx-auto px-10 max-w-md md:max-w-6xl">
           <h1 className="text-5xl font-bold text-text-blue text-center px-6 pt-4">
             Plumbing

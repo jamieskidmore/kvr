@@ -1,3 +1,5 @@
+import Review from "@/components/review";
+
 export default function Reviews() {
   const reviews = [
     {
@@ -31,18 +33,29 @@ export default function Reviews() {
   ];
 
   return (
-    <div>
-      <h2>Reviews for Kettle Valley Regional Plumbing & Gas</h2>
+    <div className="mx-10 mt-24">
       <div>
-        {reviews.map((review, index) => (
-          <div key={index}>
-            <p>{review.name}</p>
-            <p>
-              {review.rating}/5 - {review.date}
-            </p>
-            <p>{review.description}</p>
+        <div className="space-y-10 text-text-gray mx-auto text-lg px-10 max-w-md md:max-w-6xl pb-4">
+          <h1 className="text-5xl font-bold text-text-blue text-center px-6 pt-4 max-w-xl mx-auto">
+            Reviews for KVR Plumbing & Gas
+          </h1>
+          <div className="flex">
+            <a
+              className="bg-cta-orange p-4 rounded-2xl mx-auto"
+              href="https://www.google.com/maps/place/KVR+Plumbing+and+Gas/@49.4839772,-123.9637152,7z/data=!4m12!1m2!2m1!1skvr+plumbing+and+gas!3m8!1s0xa49ac26bad7a597f:0x7aa26bf93ecec84b!8m2!3d49.596935!4d-119.578889!9m1!1b1!15sChRrdnIgcGx1bWJpbmcgYW5kIGdhc1oWIhRrdnIgcGx1bWJpbmcgYW5kIGdhc5IBB3BsdW1iZXKaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTkVkRkJ4VnpCblJSQULgAQA!16s%2Fg%2F11vrhtbdtd?entry=ttu"
+            >
+              <p className="text-text-white text-2xl">Leave a review</p>
+            </a>
           </div>
-        ))}
+          {reviews.map((review, index) => (
+            <Review
+              name={review.name}
+              date={review.date}
+              rating={review.rating}
+              description={review.description}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
