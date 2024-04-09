@@ -10,16 +10,22 @@ export default function Pills({
   return (
     <div className="flex flex-wrap justify-center gap-4 mx-auto text-lg">
       {links ? (
-        links.map((item) => (
+        links.map((item, index) => (
           <Link href={`/place/${item.link}`}>
-            <div className="text-center bg-text-gray hover:bg-light-blue text-text-white p-2 rounded-2xl font-semibold">
+            <div
+              key={index}
+              className="text-center bg-text-gray hover:bg-light-blue text-text-white p-2 rounded-2xl font-semibold"
+            >
               {item.place}
             </div>
           </Link>
         ))
       ) : array ? (
-        array.map((item) => (
-          <div className="text-center bg-text-gray text-text-white p-2 rounded-2xl font-semibold">
+        array.map((item, index) => (
+          <div
+            key={index}
+            className="text-center bg-text-gray text-text-white p-2 rounded-2xl font-semibold"
+          >
             {item}
           </div>
         ))
