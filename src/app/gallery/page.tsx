@@ -58,6 +58,13 @@ export default function Gallery() {
               </ul>
             </div>
           </div>
+          <div className="flex text-text-white text- font-semibold">
+            <Link href="/contact" className="mx-auto">
+              <p className="bg-cta-orange p-4 rounded-2xl text-2xl">
+                Request a quote
+              </p>
+            </Link>
+          </div>
           <div className="max-w-3xl mx-auto">
             <div className="space-y-8">
               <div id="bathroom">

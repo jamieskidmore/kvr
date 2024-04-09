@@ -13,20 +13,24 @@ export default function Footer() {
   return (
     <div className="flex justify-between bg-header-bg space-x-3 m-3 text-4xl px-28 md:px-56">
       <div>
-        <Link
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://www.facebook.com/people/KVR-Plumbing-and-Gas/100089751965347/"
           className="hover:text-light-blue"
         >
           <FontAwesomeIcon icon={faFacebook} />
-        </Link>
+        </a>
       </div>
       <div>
-        <Link
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://www.instagram.com/kvrpg.ca/"
           className="hover:text-light-blue"
         >
           <FontAwesomeIcon icon={faInstagram} />
-        </Link>
+        </a>
       </div>
       {/* </div> */}
     </div>

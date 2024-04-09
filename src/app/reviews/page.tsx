@@ -41,6 +41,8 @@ export default function Reviews() {
           </h1>
           <div className="flex">
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-cta-orange p-4 rounded-2xl mx-auto"
               href="https://www.google.com/maps/place/KVR+Plumbing+and+Gas/@49.4839772,-123.9637152,7z/data=!4m12!1m2!2m1!1skvr+plumbing+and+gas!3m8!1s0xa49ac26bad7a597f:0x7aa26bf93ecec84b!8m2!3d49.596935!4d-119.578889!9m1!1b1!15sChRrdnIgcGx1bWJpbmcgYW5kIGdhc1oWIhRrdnIgcGx1bWJpbmcgYW5kIGdhc5IBB3BsdW1iZXKaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTkVkRkJ4VnpCblJSQULgAQA!16s%2Fg%2F11vrhtbdtd?entry=ttu"
             >

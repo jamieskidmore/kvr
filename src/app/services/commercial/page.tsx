@@ -10,11 +10,11 @@ export default function Commercial() {
           </h1>
           <div>
             <p className="text-lg">
-              KVR Plumbing and Gas provides comprehensive plumbing services for
-              both residential and commercial properties. From minor repairs to
-              major installations, our skilled team delivers reliable solutions
-              tailored to meet your needs. Trust KVR for dependable plumbing
-              services, ensuring your systems operate smoothly.
+              KVR Plumbing and Gas works closely with site managers on
+              commercial projects. Our experienced team ensures smooth
+              coordination and timely completion of plumbing tasks. Trust KVR
+              for professional and efficient plumbing services tailored to
+              commercial needs.
             </p>
           </div>
           <div className="space-y-4 pb-4">

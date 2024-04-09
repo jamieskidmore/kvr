@@ -25,6 +25,7 @@ export default function Home() {
     { place: "Naramata", link: "naramata" },
     { place: "Keremeos", link: "keremeos" },
   ];
+
   return (
     <div>
       <div className="fixed top-0 left-0 w-screen h-screen z-0">
@@ -124,7 +125,9 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-text-blue text-center px-6">
                 Contact Us
               </h2>
-              <ContactForm />
+              <div className="max-w-md md:max-w-6xl mx-auto">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>
